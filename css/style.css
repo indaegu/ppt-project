@@ -1,0 +1,77 @@
+.container {
+  font-family: "Noto Sans KR";
+  display: flex;
+  flex-direction: column; /* 페이지들을 수직으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+}
+/* 1920*1080 */
+[class^="page"] {
+  border: 5px solid rgba(247, 174, 5, 0.2);
+  width: 1920px;
+  height: 1080px;
+  margin: 1%;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+/* 각페이지 안에 들어가는 1번 도형 */
+.inner {
+  border: 5px solid black;
+  width: 95%;
+  height: 95%;
+}
+.title-name {
+  font-family: "HSBombaram3_Regular";
+  font-size: 220px;
+  color: #463838;
+  letter-spacing: 120px;
+  text-shadow: 3px 3px 0px #101010,
+    /* 메인 그림자 */ 12px 12px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
+  position: relative; /* 위치를 조절하기 위한 상대 위치 지정 */
+  border-color: #c3beb9;
+}
+
+.title-name::before {
+  content: "성창민"; /* 가상 요소의 내용 */
+  position: absolute; /* 절대 위치 지정 */
+  top: 2px; /* 글자와 겹치지 않게 위치 조절 */
+  z-index: -1; /* 글자 뒤에 위치하도록 z-index 설정 */
+  width: 100%; /* 가상 요소의 너비 */
+  height: 100%; /* 가상 요소의 높이 */
+  color: #473f35;
+  text-shadow: -1px 0px #b4997c, 0px 1px #b4997c, 1px 0px #b4997c,
+    0px -1px #b4997c;
+  font-size: 99%;
+}
+
+/* 1 페이지 성창민 부분 폰트 */
+@font-face {
+  font-family: "HSBombaram3_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 1페이지 introduction */
+.vibur-regular {
+  font-family: "Vibur", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* 1페이지 대학설명란폰트 */
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* 7페이지 3요소 폰트 */
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
