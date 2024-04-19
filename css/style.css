@@ -25,9 +25,9 @@
   font-family: "HSBombaram3_Regular";
   font-size: 220px;
   color: #463838;
-  letter-spacing: 120px;
-  text-shadow: 3px 3px 0px #101010,
-    /* 메인 그림자 */ 12px 12px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
+  letter-spacing: 120px; /*자간*/
+  text-shadow: 6px 6px 0px 0px #101010,
+    /* 메인 그림자 */ 12px 12px 0px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
   position: relative; /* 위치를 조절하기 위한 상대 위치 지정 */
   border-color: #c3beb9;
 }
@@ -36,13 +36,13 @@
   content: "성창민"; /* 가상 요소의 내용 */
   position: absolute; /* 절대 위치 지정 */
   top: 2px; /* 글자와 겹치지 않게 위치 조절 */
-  z-index: -1; /* 글자 뒤에 위치하도록 z-index 설정 */
+  z-index: 1; /* 글자 뒤에 위치하도록 z-index 설정 */
   width: 100%; /* 가상 요소의 너비 */
   height: 100%; /* 가상 요소의 높이 */
   color: #473f35;
-  text-shadow: -1px 0px #b4997c, 0px 1px #b4997c, 1px 0px #b4997c,
-    0px -1px #b4997c;
-  font-size: 99%;
+  text-shadow: -2px 0px #b4997c, 0px 2px #b4997c, 2px 0px #b4997c,
+    0px -2px #b4997c;
+  font-size: 101%;
 }
 
 /* 1 페이지 성창민 부분 폰트 */
