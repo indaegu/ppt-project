@@ -8,41 +8,455 @@
 /* 1920*1080 */
 [class^="page"] {
   border: 5px solid rgba(247, 174, 5, 0.2);
-  width: 1920px;
-  height: 1080px;
+  width: 960px;
+  height: 540px;
   margin: 1%;
   display: flex;
+  flex-direction: row;
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
+  background-image: url("/assets/backimg.png");
+  background-repeat: repeat;
 }
 /* 각페이지 안에 들어가는 1번 도형 */
 .inner {
-  border: 5px solid black;
+  border: 3px solid #463838;
   width: 95%;
   height: 95%;
+  display: flex;
+  flex-direction: column; /* 페이지들을 수직으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+}
+.inner2 {
+  display: flex;
+  flex-direction: column; /* 페이지들을 수직으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+}
+.inner-col {
+  border: 3px solid #463838;
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: row; /* 페이지들을 수평으로 정렬 */
+  justify-content: space-evenly;
+}
+.inner2-col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* 페이지들을 수직으로 정렬 */
+  justify-content: space-evenly; /* 수직 중앙 정렬 */
+}
+.section1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* 페이지들을 수직으로 정렬 */
+  align-items: center;
+}
+.section2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* 페이지들을 수평으로 정렬 */
+  justify-content: flex-end;
+}
+.section3 {
+  width: 100%;
+  height: 100%;
+  flex-direction: row; /* 페이지들을 수평으로 정렬 */
+  justify-content: flex-start;
+}
+.section3 ul {
+  display: flex;
+  flex-direction: column; /* 페이지들을 수평으로 정렬 */
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+.section3 ul > li[class^="title0"] {
+  font-weight: bold;
+  list-style-type: none; /*점 제거*/
+  list-style: none; /*점 제거*/
+  margin-bottom: 100px;
+}
+.section3 ul > li[class^="title0"] > ol {
+  font-weight: normal;
+}
+
+.introduction-area {
+  background-color: #b4997c;
+  font-family: "Vibur", cursive;
+  font-size: 2rem;
+  border: 3px solid #463838;
+  width: 60%;
+  height: 20%;
+  display: flex;
+  flex-direction: column; /* 페이지들을 수직으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  margin-bottom: 2%;
+}
+.introduction {
+  color: #463838;
 }
 .title-name {
   font-family: "HSBombaram3_Regular";
-  font-size: 220px;
+  font-size: 130px;
   color: #463838;
-  letter-spacing: 120px; /*자간*/
   text-shadow: 6px 6px 0px 0px #101010,
     /* 메인 그림자 */ 12px 12px 0px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
-  position: relative; /* 위치를 조절하기 위한 상대 위치 지정 */
   border-color: #c3beb9;
+  position: relative;
 }
-
 .title-name::before {
-  content: "성창민"; /* 가상 요소의 내용 */
-  position: absolute; /* 절대 위치 지정 */
-  top: 2px; /* 글자와 겹치지 않게 위치 조절 */
-  z-index: 1; /* 글자 뒤에 위치하도록 z-index 설정 */
-  width: 100%; /* 가상 요소의 너비 */
+  content: "성ㅤ창ㅤ민"; /* 가상 요소의 내용 */
+  top: 6px; /* 글자와 겹치지 않게 위치 조절 */
+  z-index: 10; /* 글자 뒤에 위치하도록 z-index 설정 */
   height: 100%; /* 가상 요소의 높이 */
   color: #473f35;
-  text-shadow: -2px 0px #b4997c, 0px 2px #b4997c, 2px 0px #b4997c,
+  text-shadow: -2px 0px #d4bfa9, 0px 2px #b4997c, 2px 0px #b4997c,
     0px -2px #b4997c;
-  font-size: 101%;
+  font-size: 100%;
+  position: absolute;
+}
+.page-3 {
+  background-image: url("/assets/backimgblack.png");
+}
+.page-5 {
+  background-image: url("/assets/backimgblack.png");
+}
+.page-8 {
+  background-image: url("/assets/backimgblack.png");
+}
+.title-name-page-3 {
+  font-family: "HSBombaram3_Regular";
+  width: 100%;
+  font-size: 60px;
+  color: #ba9f81;
+  text-align: center;
+}
+.upline-page-2 {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  height: 3px;
+  width: 200px;
+  background: black; /* 선의 색깔 */
+}
+.downline-page-2 {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  height: 3px;
+  width: 200px;
+  background: black; /* 선의 색깔 */
+}
+.title-name2 {
+  font-family: "HSBombaram3_Regular";
+  width: 70%;
+  height: 15%; /* 가상 요소의 높이 */
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #463838;
+  text-shadow: -2px 0px #d4bfa9, 0px 2px #b4997c, 2px 0px #b4997c,
+    0px -2px #b4997c, -3px 0px #000000, 0px 3px #000000, 3px 0px #000000,
+    0px -3px #000000;
+  text-align: center;
+}
+.title-name-page-13 {
+  font-family: "HSBombaram3_Regular";
+  font-size: 130px;
+  color: #463838;
+  text-shadow: 6px 6px 0px 0px #101010,
+    /* 메인 그림자 */ 12px 12px 0px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
+  border-color: #c3beb9;
+  position: relative;
+}
+.title-name-page-13::before {
+  content: "감사합니다"; /* 가상 요소의 내용 */
+  top: 6px; /* 글자와 겹치지 않게 위치 조절 */
+  z-index: 10; /* 글자 뒤에 위치하도록 z-index 설정 */
+  height: 100%; /* 가상 요소의 높이 */
+  color: #473f35;
+  text-shadow: -2px 0px #d4bfa9, 0px 2px #b4997c, 2px 0px #b4997c,
+    0px -2px #b4997c;
+  font-size: 100%;
+  position: absolute;
+}
+.text {
+  font-family: "Noto Sans KR";
+  font-weight: bold;
+  font-size: 15px;
+  color: #463838;
+  text-shadow: 6px 6px 0px 0px #101010,
+    /* 메인 그림자 */ 12px 12px 0px 0px rgba(0, 0, 0, 1); /* 부드러운 그림자를 위한 추가 그림자 */
+  border-color: #c3beb9;
+  position: relative;
+  display: inline;
+  /* width: 700px; */
+}
+
+.line-shape {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 3px;
+  width: 50rem; /* 선의 길이 */
+  background: black; /* 선의 색깔 */
+  position: relative;
+}
+.line1 {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+.line2 {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+.line3 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+.circle {
+  z-index: 2;
+  height: 20px; /* 원의 크기 */
+  width: 20px; /* 원의 크기. */
+  border: 3px solid #463838;
+  border-radius: 50%;
+  background-image: url("/assets/backimg.png");
+}
+.page-2 .line-shape,
+.page-4 .line-shape {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 3px;
+  height: 30rem; /* 선의 길이 */
+  background: black; /* 선의 색깔 */
+  position: relative;
+}
+.page-2 .line1,
+.page-4 .line1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+.page-2 .circle {
+  z-index: 2;
+  height: 20px; /* 원의 크기 */
+  width: 20px; /* 원의 크기. */
+  border: 3px solid #463838;
+  border-radius: 50%;
+  background-image: url("/assets/backimg.png");
+}
+/* 처음 좌우 */
+.level1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+/* 사진과 인적사항 */
+.level2 {
+  font-family: "HSBombaram3_Regular";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #463838;
+}
+.level11 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.level12 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+}
+[class^="polygon"] {
+  width: 200px;
+  height: 40px;
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 30%,
+    100% 70%,
+    90% 100%,
+    10% 100%,
+    0% 70%,
+    0% 30%
+  );
+  background-color: #9e8162;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.mbti {
+  width: 150px;
+  height: 200px;
+}
+
+.qrcode {
+  width: 100%;
+  height: 100%;
+}
+.profile {
+  width: 170px;
+  height: 170px;
+  z-index: 1000;
+  border-radius: 100%;
+  border: 3px solid #000000;
+}
+/* 이름토끼티, 큐알 */
+.level3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+/* 성창민, 인적사항 */
+.level4 {
+  font-family: "Noto Sans KR";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.level5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.name {
+  width: 95%;
+  height: 25%;
+  background-color: #b4997c;
+  border: 3px solid #463838;
+  text-align: center;
+}
+.information {
+  width: 85%;
+  height: 100%;
+  background-color: #b4997c;
+  border: 3px solid #463838;
+  text-align: start;
+  padding: 10px;
+  font-size: 13px;
+}
+.container-page-6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin: 5px;
+}
+
+.doublelineup {
+  width: 960px;
+  height: 7px;
+  border: 2px solid #463838;
+  position: relative;
+  top: 30px;
+}
+.divide-page-6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px;
+}
+.content-page-6-title {
+  font-family: "HSBombaram3_Regular";
+  font-size: 45px;
+  color: #463838;
+  width: 100%;
+  height: 450px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 5px;
+}
+.content-page-6-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 10px;
+  position: relative;
+  bottom: 30px;
+}
+
+.doublelinedown {
+  width: 960px;
+  height: 7px;
+  border: 2px solid #463838;
+  position: relative;
+  bottom: 30px;
+}
+
+.content-page-7-triplecircle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  background-color: #463838;
+}
+
+[class^="triple-circle-"] {
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+}
+
+.triple-circle-1 {
+  z-index: 1;
+  background-color: rgba(216, 27, 27, 0.507);
+}
+.triple-circle-2 {
+  z-index: 2;
+  background-color: rgba(14, 14, 240, 0.5);
+}
+.triple-circle-3 {
+  z-index: 3;
+  background-color: rgba(0, 248, 12, 0.658);
 }
 
 /* 1 페이지 성창민 부분 폰트 */
