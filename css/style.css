@@ -15,7 +15,7 @@
   flex-direction: row;
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
-  background-image: url("/assets/backimg.png");
+  background-image: url("../assets/backimg.png");
   background-repeat: repeat;
 }
 /* 각페이지 안에 들어가는 1번 도형 */
@@ -126,13 +126,13 @@
   position: absolute;
 }
 .page-3 {
-  background-image: url("/assets/backimgblack.png");
+  background-image: url("../assets/backimgblack.png");
 }
 .page-5 {
-  background-image: url("/assets/backimgblack.png");
+  background-image: url("../assets/backimgblack.png");
 }
 .page-8 {
-  background-image: url("/assets/backimgblack.png");
+  background-image: url("../assets/backimgblack.png");
 }
 .title-name-page-3 {
   font-family: "HSBombaram3_Regular";
@@ -238,7 +238,7 @@
   width: 20px; /* 원의 크기. */
   border: 3px solid #463838;
   border-radius: 50%;
-  background-image: url("/assets/backimg.png");
+  background-image: url("../assets/backimg.png");
 }
 .page-2 .line-shape,
 .page-4 .line-shape {
@@ -266,7 +266,7 @@
   width: 20px; /* 원의 크기. */
   border: 3px solid #463838;
   border-radius: 50%;
-  background-image: url("/assets/backimg.png");
+  background-image: url("../assets/backimg.png");
 }
 /* 처음 좌우 */
 .level1 {
